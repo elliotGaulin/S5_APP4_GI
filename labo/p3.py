@@ -18,8 +18,8 @@ ord, wn  = signal.buttord(wp = 2500 / nyquist, ws = 3500 / nyquist, gpass = gpas
 print("Order of the Butterworth filter:", ord) #18
 b, a = signal.butter(ord, 2500 / nyquist, btype='low')
 w, h = signal.freqz(b, a)
+plt.figure()
 ax1 = plt.plot((w * nyquist / np.pi)/np.pi, 20 * np.log10(abs(h)))
-
 plt.axhline(y=-3, color='green', linestyle='--') 
 plt.axvline(x=2500, color='red', linestyle='--') 
 plt.title('Butterworth filter frequency response')
@@ -33,6 +33,7 @@ plt.grid()
 # ax2.plot(w * nyquist / np.pi, angles, 'orange')
 print("Coefficients b:", b)
 print("Coefficients a:", a)
+plt.figure()
 zplane(b, a)
 
 plt.show()
