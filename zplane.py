@@ -80,7 +80,8 @@ def zplane(b, a, filename=None):
     plt.yticks(ticks)
 
     if filename is None:
-        plt.show()
+        # plt.show()
+        pass
     else:
         plt.savefig(filename)
 
