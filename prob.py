@@ -1,3 +1,5 @@
+#AUTEURS : Elliot Gaulin (gaue1909) et Vincent Belisle (belv1805)
+
 import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
 import numpy as np
